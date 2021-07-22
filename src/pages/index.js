@@ -15,6 +15,9 @@ const IndexPage = () => (
     <Hero />
     <Features />
     <BlogSection />
+    <p>
+      <Link to="/blogPost">View All Blogs</Link>
+    </p>
     <HomeNewsletter />
 
     {/* <StaticImage

@@ -12,37 +12,111 @@ collections:
     folder: content/blog
     create: true
     slug: "index"
+    media_folder: ""
+    public_folder: ""
     path: "{{title}}/index"
     editor:
-      preview: false
+      preview: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: Title, widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: date, label: Publish Date, widget: datetime }
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        # default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
+      - {
+          name: featured,
+          label: "Featured Blog",
+          widget: "boolean",
+          default: false,
+        }
+      - { name: body, label: Content, widget: markdown }
+  - name: product
+    label: Product
+    folder: content/product
+    create: true
+    slug: "index"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}/index"
+    editor:
+      preview: true
+    fields:
+      - { name: title, label: Title, widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: date, label: Publish Date, widget: datetime }
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        required: false
+        media_library:
+          config:
+            multiple: true
+      - {
+          name: featured,
+          label: "Featured Blog",
+          widget: "boolean",
+          default: false,
+        }
+      - { name: body, label: Content, widget: markdown }
   - name: artist
     label: Artist
     folder: content/artist
     create: true
     slug: "index"
-    path: "/artist/{{title}}/index"
+    path: "{{title}}/index"
     editor:
       preview: false
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: Title, widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: date, label: Publish Date, widget: datetime }
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        # default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
+      - {
+          name: featured,
+          label: "Featured Blog",
+          widget: "boolean",
+          default: false,
+        }
+      - { name: body, label: Content, widget: markdown }
   - name: album
     label: Album
     folder: content/album
     create: true
     slug: "index"
-    path: "/album/{{title}}/index"
+    path: "{{title}}/index"
     editor:
       preview: false
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: Title, widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: date, label: Publish Date, widget: datetime }
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        # default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
+      - {
+          name: featured,
+          label: "Featured Blog",
+          widget: "boolean",
+          default: false,
+        }
+      - { name: body, label: Content, widget: markdown }
