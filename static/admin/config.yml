@@ -9,26 +9,38 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: content/blog
     create: true
+    slug: "index"
+    path: "{{title}}/index"
+    editor:
+      preview: false
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
   - name: artist
-    label: artist
-    folder: artists
+    label: Artist
+    folder: content/artist
     create: true
+    slug: "index"
+    path: "/artist/{{title}}/index"
+    editor:
+      preview: false
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
   - name: album
-    label: album
-    folder: albums
+    label: Album
+    folder: content/album
     create: true
+    slug: "index"
+    path: "/album/{{title}}/index"
+    editor:
+      preview: false
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
