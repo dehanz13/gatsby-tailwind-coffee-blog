@@ -1,5 +1,7 @@
 backend:
-  name: test-repo
+  name: github
+  repo: dehanz13/gatsby-tailwind-coffee-blog
+  branch: master
 
 media_folder: static/assets
 public_folder: assets
