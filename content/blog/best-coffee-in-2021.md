@@ -1,6 +1,6 @@
 ---
 path: /blog/three
-title: Best Coffee In 2021
+title: Best Mild Coffee In 2021
 description: A list of the best coffee out there.
 date: 2021-07-28T05:25:59.474Z
 featuredpost: true
