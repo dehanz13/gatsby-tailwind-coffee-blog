@@ -6,12 +6,12 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
+    <div className="product-post-container">
+      <div className="product-post">
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
         <div
-          className="blog-post-content"
+          className="product-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
@@ -34,7 +34,7 @@ export default function Template({
 //   }
 // `
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query ProductPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

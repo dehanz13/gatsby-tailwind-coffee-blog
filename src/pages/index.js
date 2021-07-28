@@ -18,9 +18,9 @@ const IndexPage = () => (
     <p>
       <Link to="/blogPost">View All Blogs</Link>
     </p>
-    {/* <p>
-      <Link to="/productPage">View All Products</Link>
-    </p> */}
+    <p>
+      <Link to="/productPost">View All Products</Link>
+    </p>
     <HomeNewsletter />
 
     {/* <StaticImage
