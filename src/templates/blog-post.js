@@ -18,6 +18,21 @@ export default function Template({
     </div>
   )
 }
+// export const pageQuery = graphql`
+//   query {
+//     childrenMarkdownRemark {
+//       frontmatter {
+//         title
+//         thumbnail
+//         path
+//         featured
+//         description
+//         date(formatString: "MMMM DD, YYYY")
+//       }
+//       excerpt(pruneLength: 400)
+//     }
+//   }
+// `
 export const pageQuery = graphql`
   query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {

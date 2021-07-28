@@ -9,7 +9,6 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="columns is-multiline">
-        <h1>BLOG ROLL</h1>
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
