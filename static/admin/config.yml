@@ -63,39 +63,39 @@ collections:
         #     multiple: true
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-- name: "product"
-  label: "Product"
-  folder: "content/product"
-  create: true
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  editor:
-    preview: true
-  fields:
-    - {
-        label: "Template Key",
-        name: "templateKey",
-        widget: "hidden",
-        default: "product-post",
-      }
-    - { label: "Title", name: "title", widget: "string" }
-    - { label: "Publish Date", name: "date", widget: "datetime" }
-    - { label: "Description", name: "description", widget: "text" }
-    - {
-        name: "featuredproduct",
-        label: "Featured Blog",
-        widget: "boolean",
-        default: false,
-      }
-    - label: "Thumbnail Image"
-      name: "thumbnail"
-      widget: image
-      choose_url: true
-      # default: "/uploads/chocolate-dogecoin.jpg"
-      # media_library:
-      #   config:
-      #     multiple: true
-    - { label: "Body", name: "body", widget: "markdown" }
-    - { label: "Tags", name: "tags", widget: "list" }
+  - name: "product"
+    label: "Product"
+    folder: "content/product"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "product-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          name: "featuredproduct",
+          label: "Featured Blog",
+          widget: "boolean",
+          default: false,
+        }
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: image
+        choose_url: true
+        # default: "/uploads/chocolate-dogecoin.jpg"
+        # media_library:
+        #   config:
+        #     multiple: true
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
 # - name: artist
 #   label: Artist
 #   folder: content/artist
