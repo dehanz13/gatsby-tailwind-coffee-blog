@@ -1,11 +1,29 @@
 backend:
   name: github
   repo: dehanz13/gatsby-tailwind-coffee-blog
-  branch: master
+  branch: cloudinary
+  # commit_messages:
+  #   create: 'Create {{collection}} “{{slug}}”'
+  #   update: 'Update {{collection}} “{{slug}}”'
+  #   delete: 'Delete {{collection}} “{{slug}}”'
+  #   uploadMedia: '[skip ci] Upload “{{path}}”'
+  #   deleteMedia: '[skip ci] Delete “{{path}}”'
 
 media_folder: static/assets
 public_folder: assets
 
+# global
+# media_library:
+#   name: cloudinary
+#   output_filename_only: false
+#   config:
+#     cloud_name: dttsxnc06
+#     api_key: 836852724284691
+#     default_transformations:
+#       - - fetch_format: auto
+#           width: 160
+#           quality: auto
+#           crop: scale
 # slug:
 #   encoding: "ascii"
 #   clean_accents: true
@@ -37,13 +55,13 @@ collections:
     editor:
       preview: true
     fields:
-      - { name: path, label: Path }
       - {
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
           default: "blog-post",
         }
+      # - { name: "blogCategory", label: "Blog Category", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -77,6 +95,7 @@ collections:
         widget: "hidden",
         default: "product-post",
       }
+    # - { name: "productCategory", label: "Product Category", widget: "string" }
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Publish Date", name: "date", widget: "datetime" }
     - { label: "Description", name: "description", widget: "text" }
