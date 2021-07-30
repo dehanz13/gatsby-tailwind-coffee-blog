@@ -6,9 +6,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
   return (
-    <div id="hero" class="grid overflow-hidden hero text-primary-content ">
+    <div id="hero" className="grid overflow-hidden hero text-primary-content ">
       <StaticImage
-        class="overlay"
+        className="overlay"
         style={{
           gridArea: "1/1",
           maxHeight: 800,
@@ -20,7 +20,7 @@ const Hero = () => {
         formats={["auto", "webp", "avif"]}
       />
       <div
-        class=""
+        className=""
         style={{
           gridArea: "1/1",
           position: "relative",

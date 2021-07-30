@@ -9,21 +9,23 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
+publish_mode: editorial_workflow
+
 media_folder: static/assets
 public_folder: assets
 
 # global
-media_library:
-  name: cloudinary
-  output_filename_only: false
-  config:
-    cloud_name: dttsxnc06
-    api_key: 836852724284691
-    default_transformations:
-      - - fetch_format: auto
-          width: 160
-          quality: auto
-          crop: scale
+# media_library:
+#   name: cloudinary
+#   output_filename_only: true
+#   config:
+#     cloud_name: dttsxnc06
+#     api_key: 836852724284691
+# default_transformations:
+#   - - fetch_format: auto
+#       width: 160
+#       quality: auto
+#       crop: scale
 # slug:
 #   encoding: "ascii"
 #   clean_accents: true
@@ -71,14 +73,22 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - label: "Thumbnail Image"
-        name: "thumbnail"
-        widget: image
-        choose_url: true
-        # default: "/uploads/chocolate-dogecoin.jpg"
-        # media_library:
-        #   config:
-        #     multiple: true
+      - {
+          label: "Thumbnail Image",
+          name: "thumbnail",
+          widget: image,
+          choose_url: true,
+          # default: "/uploads/chocolate-dogecoin.jpg"
+          # media_library:
+          #   name: cloudinary
+          #   output_filename_only: false
+          #   config:
+          #     cloud_name: dttsxnc06
+          #     api_key: 836852724284691
+          # media_library:
+          #   config:
+          #     multiple: true
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "product"

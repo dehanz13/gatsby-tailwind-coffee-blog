@@ -7,7 +7,9 @@ description: Vietnam and coffee have a long relationship. Today Vietnam is the
   But back before the colonial times, coffee was not well known at all.
 featuredpost: true
 thumbnail: https://res.cloudinary.com/dttsxnc06/image/upload/v1627516395/Coffee%20Affiliate%20Site/Blogs/Coffee%20Guides/Vietnamese%20Coffee%20Guide/vietnamese-coffee-and-phin-filter_va6gdt.jpg
+thumbnailAlt: Vietnamese Coffee
 ---
+
 The French introduced coffee cultivation and the drinking of it based on their taste: dark, strong and with a heavy body. At the same time, adding milk to it was customary for the French and they kept brewing their cafe au lait in Vietnam too.
 
 But because of the tropical environment, fresh milk would go sour quickly, posing an obstacle to the easy consumption of it along with coffee. Condensed milk was then first imported and then locally produced. This is a type of milk from which most water, roughly 60% of the total, is removed.

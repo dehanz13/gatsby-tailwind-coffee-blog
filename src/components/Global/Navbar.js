@@ -45,30 +45,30 @@ const Navbar = ({ siteTitle }) => {
   }
 
   return (
-    <nav class="flex items-center bg-gray-100 p-6">
-      <div class="container mx-auto flex justify-between lg:flex-col">
+    <nav className="flex items-center bg-gray-100 p-6">
+      <div className="container mx-auto flex justify-between lg:flex-col">
         <Header siteTitle={siteTitle} />
-        <div class="block flex items-center lg:hidden">
+        <div className="block flex items-center lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
+            className="h-6 w-6 fill-current stroke-current stroke-1"
+            // fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
+            // stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              // strokeLineCap="round"
+              // strokeLineJoin="round"
+              // strokeWidth="2"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
           <button
-            class="flex items-center ml-4 px-3 py-2 border rounded text-gray-800 border-yellow-700 hover:text-yellow-700 hover:border-white"
+            className="flex items-center ml-4 px-3 py-2 border rounded text-gray-800 border-yellow-700 hover:text-yellow-700 hover:border-white"
             onClick={toggleNav}
           >
             <svg
-              class="fill-current h-3 w-3"
+              className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -77,8 +77,8 @@ const Navbar = ({ siteTitle }) => {
             </svg>
           </button>
         </div>
-        <div class="w-full lg:block xs:hidden flex-grow lg:flex lg:items-center lg:w-auto">
-          <div class="text-xl font-semibold flex lg:flex-grow">
+        <div className="w-full lg:block xs:hidden flex-grow lg:flex lg:items-center lg:w-auto">
+          <div className="text-xl font-semibold flex lg:flex-grow">
             {navLinks.map((navLink, index) => (
               <p
                 key={index}
@@ -90,19 +90,19 @@ const Navbar = ({ siteTitle }) => {
               </p>
             ))}
           </div>
-          <div class="relative flex w-1/6 flex-wrap items-stretch inline-block ">
-            <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+          <div className="relative flex w-1/6 flex-wrap items-stretch inline-block ">
+            <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
-                fill="none"
+                className="h-4 w-4 fill-current stroke-current stroke-1"
+                // fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                // stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  // strokeLineCap="round"
+                  // strokeLineJoin="round"
+                  // strokeWidth="2"
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
@@ -110,7 +110,7 @@ const Navbar = ({ siteTitle }) => {
             <input
               type="text"
               placeholder="Search..."
-              class="px-3 py-2 placeholder-gray-400 text-yellow-700 relative bg-gray-100 bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full pl-10"
+              className="px-3 py-2 placeholder-gray-400 text-yellow-700 relative bg-gray-100 bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full pl-10"
             />
           </div>
         </div>

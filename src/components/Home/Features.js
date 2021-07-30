@@ -2,17 +2,17 @@ import React from "react"
 
 const Features = () => {
   return (
-    <div class="container mx-auto px-4 py-20 h-5/6  overflow-hidden">
-      <div class="flex mx-auto mb-4 text-yellow2-700">
-        <h1 class="flex mx-auto text-center ">
+    <div className="container mx-auto px-4 py-20 h-5/6  overflow-hidden">
+      <div className="flex mx-auto mb-4 text-yellow2-700">
+        <h1 className="flex mx-auto text-center ">
           What do you want to learn about?
         </h1>
       </div>
-      <div class="grid lg:grid-rows-2 xs:grid-rows-6 grid-flow-col gap-4 ">
-        <div class="flex flex-col justify-center">
-          <div class="flex mx-auto pl-4">
+      <div className="grid lg:grid-rows-2 xs:grid-rows-6 grid-flow-col gap-4 ">
+        <div className="flex flex-col justify-center">
+          <div className="flex mx-auto pl-4">
             <svg
-              class="flex-shrink fill-current"
+              className="flex-shrink fill-current"
               fill="none"
               width="100"
               height="100"
@@ -23,17 +23,17 @@ const Features = () => {
               <path d="M290.149 115.721a7.973 7.973 0 005.447-2.142c3.356-3.122 6.884-6.14 10.486-8.97a8 8 0 10-9.887-12.58c-3.948 3.1-7.816 6.411-11.5 9.834a8 8 0 005.45 13.858zM249.27 164.845a7.994 7.994 0 0010.724-3.6 166.483 166.483 0 0118.325-28.927 8 8 0 10-12.56-9.91 182.321 182.321 0 00-20.091 31.714 8 8 0 003.602 10.723zM94.5 413.242a8 8 0 0012.162-10.4c-2.979-3.485-5.849-7.136-8.525-10.852a8 8 0 00-12.983 9.352c2.939 4.076 6.083 8.079 9.346 11.9zM114.237 433.024a182.34 182.34 0 0030.847 21.4 8 8 0 107.715-14.017 166.344 166.344 0 01-28.136-19.517 8 8 0 00-10.426 12.136z" />
             </svg>
           </div>
-          <div class="flex-col text-center">
-            <h4 class="mb-2 lg-py:0 leading-normal">Coffee Beans</h4>
-            <p class="font-extralight">
+          <div className="flex-col text-center">
+            <h4 className="mb-2 lg-py:0 leading-normal">Coffee Beans</h4>
+            <p className="font-extralight">
               Hand-selected lists of the best from around the world.
             </p>
           </div>
         </div>
-        <div class="flex flex-col justify-center">
-          <div class="flex mx-auto pl-4">
+        <div className="flex flex-col justify-center">
+          <div className="flex mx-auto pl-4">
             <svg
-              class="flex-shrink fill-current"
+              className="flex-shrink fill-current"
               fill="none"
               width="100"
               height="100"
@@ -43,17 +43,17 @@ const Features = () => {
               <path d="M509.912 91.3l-7.078-14.232c-2.521-5.068-6.857-8.808-12.208-10.53-5.252-1.688-10.808-1.207-15.656 1.357l-205.002 108.46c-8.031 4.248-11.439 13.656-8.293 22.064-1.548.521-3.117.993-4.706 1.416-.832-6.913-6.637-12.304-13.726-12.493.052-.257.094-.526.148-.781l6.67-31.699c2.793-12.082-7.19-24.421-19.597-24.157H96.546c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h133.919c3.372.131 5.469 2.787 4.917 6.08-.373 1.969-7.392 34.736-7.399 35.538H43.57c-.185-.313-.359-.621-.555-.938l-25.016-40.68h42.97c4.142 0 7.5-3.357 7.5-7.5 0-4.142-3.358-7.5-7.5-7.5h-42.97c-5.446 0-10.478 2.955-13.133 7.711-2.657 4.76-2.53 10.598.332 15.237l21.505 34.859c-5.022 2.196-8.543 7.206-8.543 13.029v16.591c.128 9.284 7.931 15.094 16.885 14.217L1.329 384.7c-7.515 30.796 17.893 62.532 49.598 61.847-.001.001 115.747.001 115.747.001 9.861-.293 9.961-14.675 0-15H50.926c-22.343.481-40.257-21.902-34.952-43.608l34.433-155.59h178.149c.381 1.413 33.374 154.195 33.786 155.733 2.315 10.663-.282 21.65-7.125 30.139-6.828 8.469-16.979 13.326-27.852 13.326H201.74c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h25.626c31.624.674 57.013-30.895 49.634-61.649.001 0-33.127-152.6-33.127-152.6 7.369-.521 13.209-6.667 13.209-14.166v-2.888c3.926-.872 7.77-1.994 11.506-3.357 5.011 6.754 14.312 9.224 21.874 5.642l209.98-98.457c.001 0 .001-.001.001-.001 10.248-4.553 14.678-17.861 9.469-27.772zM33.16 202.323h208.922v15.027H33.16zm463.626-99.872c-.475 1.363-1.438 2.443-2.713 3.041l.001-.001-209.981 98.458c-1.354.634-3.045-.022-3.766-1.47l-4.451-8.951c-.724-1.453-.228-3.21 1.105-3.915l205.002-108.46c1.251-.664 2.702-.772 4.047-.337 1.47.473 2.668 1.515 3.373 2.932l7.077 14.231c.709 1.421.816 3.009.306 4.472z" />
             </svg>
           </div>
-          <div class="flex-col text-center">
-            <h4 class="mb-2 lg-py:0 leading-normal">Coffee Knowledge</h4>
-            <p class="font-extralight">
+          <div className="flex-col text-center">
+            <h4 className="mb-2 lg-py:0 leading-normal">Coffee Knowledge</h4>
+            <p className="font-extralight">
               Deep dives into anything and everything else coffee.
             </p>
           </div>
         </div>
-        <div class="flex flex-col justify-center">
-          <div class="flex mx-auto pl-4">
+        <div className="flex flex-col justify-center">
+          <div className="flex mx-auto pl-4">
             <svg
-              class="flex-shrink fill-current"
+              className="flex-shrink fill-current"
               fill="none"
               width="100"
               height="100"
@@ -64,18 +64,18 @@ const Features = () => {
               <path d="M215.9 312.3h16v15h-16zM248 312.3h16v15h-16zM280 312.3h16v15h-16z" />
             </svg>
           </div>
-          <div class="flex-col text-center">
-            <h4 class="mb-2 lg-py:0 leading-normal">Guides & How To's</h4>
-            <p class="font-extralight">
+          <div className="flex-col text-center">
+            <h4 className="mb-2 lg-py:0 leading-normal">Guides & How To's</h4>
+            <p className="font-extralight">
               Step-by-step processes for crafting the perfect cup.
             </p>
           </div>
         </div>
-        <div class="flex flex-col justify-center">
-          <div class="flex mx-auto pl-4">
+        <div className="flex flex-col justify-center">
+          <div className="flex mx-auto pl-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="flex-shrink fill-current"
+              className="flex-shrink fill-current"
               fill="none"
               width="100"
               height="100"
@@ -85,17 +85,17 @@ const Features = () => {
               <path d="M232 352a24.0275 24.0275 0 0024-24c0-10.22754-12.18066-28.96484-17.418-36.54688a7.9996 7.9996 0 00-13.16406 0C220.18066 299.03516 208 317.77246 208 328a24.0275 24.0275 0 0024 24zm.00195-41.17285c4.6045 7.75586 7.92969 14.72461 7.99805 17.17871a8 8 0 01-16 .00293c.06543-2.44531 3.39258-9.41699 8.002-17.18164z" />
             </svg>
           </div>
-          <div class="flex-col text-center">
-            <h4 class="mb-2 lg-py:0 leading-normal">Coffee Makers</h4>
-            <p class="font-extralight">
+          <div className="flex-col text-center">
+            <h4 className="mb-2 lg-py:0 leading-normal">Coffee Makers</h4>
+            <p className="font-extralight">
               Our Favorites for those mornings when you just need caffeine.
             </p>
           </div>
         </div>
-        <div class="flex flex-col justify-center">
-          <div class="flex mx-auto pl-4">
+        <div className="flex flex-col justify-center">
+          <div className="flex mx-auto pl-4">
             <svg
-              class="flex-shrink fill-current"
+              className="flex-shrink fill-current"
               fill="none"
               width="100"
               height="100"
@@ -107,15 +107,17 @@ const Features = () => {
               <path d="M255.924 361.346c-12.958 0-23.5 10.542-23.5 23.5 1.181 31.133 45.823 31.125 47 0 0-12.958-10.542-23.5-23.5-23.5zm0 32c-4.687 0-8.5-3.813-8.5-8.5.399-11.25 16.602-11.247 17 0 0 4.687-3.814 8.5-8.5 8.5z" />
             </svg>
           </div>
-          <div class="flex-col text-center">
-            <h4 class="mb-2 lg-py:0 leading-normal">Coffee Accessories</h4>
-            <p class="font-extralight">Essential Coffee Gear for your home.</p>
+          <div className="flex-col text-center">
+            <h4 className="mb-2 lg-py:0 leading-normal">Coffee Accessories</h4>
+            <p className="font-extralight">
+              Essential Coffee Gear for your home.
+            </p>
           </div>
         </div>
-        <div class="flex flex-col justify-center">
-          <div class="flex mx-auto pl-4">
+        <div className="flex flex-col justify-center">
+          <div className="flex mx-auto pl-4">
             <svg
-              class="flex-shrink fill-current"
+              className="flex-shrink fill-current"
               fill="none"
               width="100"
               height="100"
@@ -128,9 +130,9 @@ const Features = () => {
               <path d="M96 192c-13.2539 0-24 10.7461-24 24s10.7461 24 24 24 24-10.7461 24-24-10.7461-24-24-24zm0 32c-4.41797 0-8-3.58203-8-8s3.58203-8 8-8 8 3.58203 8 8-3.58203 8-8 8zm0 0M96 264c-13.2539 0-24 10.7461-24 24s10.7461 24 24 24 24-10.7461 24-24-10.7461-24-24-24zm0 32c-4.41797 0-8-3.58203-8-8s3.58203-8 8-8 8 3.58203 8 8-3.58203 8-8 8zm0 0M72 64h256c4.41797 0 8-3.58203 8-8s-3.58203-8-8-8H72c-4.41797 0-8 3.58203-8 8s3.58203 8 8 8zm0 0M352 64h8c4.41797 0 8-3.58203 8-8s-3.58203-8-8-8h-8c-4.41797 0-8 3.58203-8 8s3.58203 8 8 8zm0 0M56 56c0-4.41797-3.58203-8-8-8h-8c-4.41797 0-8 3.58203-8 8s3.58203 8 8 8h8c4.41797 0 8-3.58203 8-8zm0 0" />
             </svg>
           </div>
-          <div class="flex-col text-center">
-            <h4 class="mb-2 lg-py:0 leading-normal">Espresso Machines</h4>
-            <p class="font-extralight">
+          <div className="flex-col text-center">
+            <h4 className="mb-2 lg-py:0 leading-normal">Espresso Machines</h4>
+            <p className="font-extralight">
               Our top picks for making your favorites at home.
             </p>
           </div>

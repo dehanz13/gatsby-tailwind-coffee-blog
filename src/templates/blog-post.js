@@ -2,32 +2,45 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
+import { getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Content, { HTMLContent } from "../components/Global/Content"
+import PreviewCompatibleImage from "../components/Post/PreviewCompatibleImage"
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
+  thumbnail,
   description,
   tags,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
-
+  const image = getImage(thumbnail)
   return (
-    <section className="section">
+    <section
+      className="w-3/4 my-8 mx-auto container"
+      style={{ minHeight: "80vh" }}
+    >
       {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {/* {tags && tags.length ? (
+      <div className="mx-auto">
+        <h1 className="text-3xl sm:text-5xl font-bold mb-8">{title}</h1>
+        <div className="flex justify-center">
+          <PreviewCompatibleImage
+            imageInfo={{
+              image: image,
+              alt: `featured image thumbnail for post ${title}`,
+            }}
+          />
+        </div>
+        {/* <p className="text-sm font-light mb-4">{description}</p> */}
+        <div className="mt-8 text-base font-light flex items-center">
+          <PostContent content={content} />
+        </div>
+
+        {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -39,14 +52,13 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null} */}
-          </div>
-        </div>
       </div>
     </section>
   )
 }
 
 BlogPostTemplate.propTypes = {
+  thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -59,9 +71,11 @@ const BlogPost = ({
 }) => {
   const { markdownRemark: post } = data // data.markdownRemark holds your post data
   // const { frontmatter, html } = markdownRemark
+
   return (
     <Layout>
       <BlogPostTemplate
+        thumbnail={post.thumbnail.childImageSharp.gatsbyImageData}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -93,7 +107,10 @@ const BlogPost = ({
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+      thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
   }),
 }
 
@@ -122,6 +139,20 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        thumbnail
+      }
+      thumbnail {
+        childImageSharp {
+          gatsbyImageData(
+            height: 600
+            width: 600
+            placeholder: BLURRED
+            quality: 50
+            blurredOptions: { width: 100 }
+            transformOptions: { cropFocus: CENTER, fit: COVER }
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
       }
     }
   }

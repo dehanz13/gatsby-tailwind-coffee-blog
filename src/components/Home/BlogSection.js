@@ -42,8 +42,8 @@ const tempBlogs = [
 
 const BlogSection = () => {
   return (
-    <div class="container mx-auto">
-      <h1 class="text-center text-4xl text-gray-700">Latest Posts</h1>
+    <div className="container mx-auto">
+      <h1 className="text-center text-4xl text-gray-700">Latest Posts</h1>
       <div
         className="lg:px-20 lg:pt-2 lg:pb-20 xs:px-6 xs:py-20"
         style={{ display: "grid" }}
@@ -56,11 +56,11 @@ const BlogSection = () => {
             display: "grid",
           }}
         >
-          <div class="grid lg:grid-cols-3 xs:grid-cols-1 gap-10 ">
+          <div className="grid lg:grid-cols-3 xs:grid-cols-1 gap-10 ">
             {tempBlogs.map((blog, index) => (
               <div
                 key={blog.id}
-                class="max-w-lg rounded overflow-hidden shadow-lg  bg-gray-100"
+                className="max-w-lg rounded overflow-hidden shadow-lg  bg-gray-100"
               >
                 <StaticImage
                   style={{
@@ -72,15 +72,15 @@ const BlogSection = () => {
                   src="../../images/home-bg1.jpg"
                   formats={["auto", "webp", "avif"]}
                 />
-                <div class="px-6 py-10">
-                  <div class="font-bold text-xl mb-2 text-gray-700">
+                <div className="px-6 py-10">
+                  <div className="font-bold text-xl mb-2 text-gray-700">
                     <p>{blog.title}</p>
                   </div>
-                  <p class="text-gray-500 text-base font-light">
+                  <p className="text-gray-500 text-base font-light">
                     {blog.description}
                   </p>
                   <p>
-                    <span class="inline-block  py-2 text-sm font-semibold text-yellow-700 my-4">
+                    <span className="inline-block  py-2 text-sm font-semibold text-yellow-700 my-4">
                       Read More About Little Coffee Pub
                     </span>
                   </p>
@@ -90,13 +90,13 @@ const BlogSection = () => {
           </div>
         </div>
       </div>
-      <div class="flex justify-between text-center py-6">
+      <div className="flex justify-between text-center py-6">
         <h1>Read Our Unfiltered, Coffee-Talkin' Blog Now</h1>
         <button
-          class="bg-yellow-600 text-gray-100 active:bg-yellow-800 uppercase lg:px-4 lg:py-2 xs:px-1 xs:py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150"
+          className="bg-yellow-600 text-gray-100 active:bg-yellow-800 uppercase lg:px-4 lg:py-2 xs:px-1 xs:py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150"
           type="button"
         >
-          <p class="lg:text-lg xs:text-xs lg:font-bold xs:font-medium">
+          <p className="lg:text-lg xs:text-xs lg:font-bold xs:font-medium">
             Subscribe!
           </p>
         </button>

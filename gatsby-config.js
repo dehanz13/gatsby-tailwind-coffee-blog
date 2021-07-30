@@ -7,29 +7,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-postcss`,
-    // {
-    //   resolve: `gatsby-plugin-sass`,
-    //   options: {
-    //     postCssPlugins: [
-    //       require("tailwindcss"),
-    //       require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
-    //     ],
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-contentful`,
-    //   options: {
-    //     spaceId: ``,
-    //     accessToken: ``,
-    //     host: `preview.contentful.com`,
-    //   },
-    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/static/assets`,
       },
     },
     {
@@ -46,7 +36,6 @@ module.exports = {
         name: `products`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -55,6 +44,15 @@ module.exports = {
             resolve: "gatsby-remark-relative-images",
             options: {
               name: "uploads",
+              // [Optional] The root of "media_folder" in your config.yml
+              // Defaults to "static"
+              staticFolderName: "static",
+              // [Optional] Include the following fields, use dot notation for nested fields
+              // All fields are included by default
+              include: ["thumbnail"],
+              // [Optional] Exclude the following fields, use dot notation for nested fields
+              // No fields are excluded by default
+              exclude: ["thumbnail.skip"],
             },
           },
           {
@@ -84,6 +82,24 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-plugin-sharp`,
+    //   options: {
+    //     defaults: {
+    //       formats: [`auto`, `webp`],
+    //       placeholder: `dominantColor`,
+    //       quality: 50,
+    //       breakpoints: [750, 1080, 1366, 1920],
+    //       backgroundColor: `transparent`,
+    //       tracedSVGOptions: {},
+    //       blurredOptions: {},
+    //       jpgOptions: {},
+    //       pngOptions: {},
+    //       webpOptions: {},
+    //       avifOptions: {},
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
