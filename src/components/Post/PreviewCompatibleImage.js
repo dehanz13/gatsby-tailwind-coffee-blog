@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: "5px" }
-  const { alt = "", childImageSharp, image } = imageInfo
+  const { alt = "", childImageSharp, image, imgStyle, style } = imageInfo
   const thumbnailImage = getImage(image)
 
   if (!!image && !!image.childImageSharp) {
@@ -40,7 +40,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   return (
     // null
     <div>
-      <GatsbyImage image={thumbnailImage} alt={alt} />
+      <GatsbyImage style={style} image={thumbnailImage} alt={alt} />
     </div>
   )
 }
@@ -51,6 +51,7 @@ PreviewCompatibleImage.propTypes = {
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     style: PropTypes.object,
+    imgStyle: PropTypes.string,
   }).isRequired,
 }
 

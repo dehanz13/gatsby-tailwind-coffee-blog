@@ -145,7 +145,7 @@ export const pageQuery = graphql`
         childImageSharp {
           gatsbyImageData(
             height: 600
-            width: 600
+            width: 900
             placeholder: BLURRED
             quality: 50
             blurredOptions: { width: 100 }

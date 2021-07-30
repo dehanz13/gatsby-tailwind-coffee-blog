@@ -13,13 +13,23 @@ class BlogPage extends React.Component {
             className="lg:px-20 lg:pt-2 lg:pb-20 xs:px-6 xs:py-20"
             style={{ display: "grid" }}
           >
-            <section className="section">
+            <div
+              style={{
+                gridArea: "1/1",
+                position: "relative",
+                placeItems: "center",
+                display: "grid",
+              }}
+            >
+              <BlogRoll />
+            </div>
+            {/* <section className="section">
               <div className="container">
                 <div className="content">
                   <BlogRoll />
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
           <div class="flex justify-between text-center py-6">
             <h1>Read Our Unfiltered, Coffee-Talkin' Blog Now</h1>

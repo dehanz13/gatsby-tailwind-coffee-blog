@@ -60,7 +60,7 @@ const BlogSection = () => {
             {tempBlogs.map((blog, index) => (
               <div
                 key={blog.id}
-                className="max-w-lg rounded overflow-hidden shadow-lg  bg-gray-100"
+                className="max-w-lg rounded overflow-hidden shadow-lg bg-gray-100"
               >
                 <StaticImage
                   style={{
